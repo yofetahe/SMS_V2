@@ -15,60 +15,7 @@
 <c:url value="/Resources/js/highcharts.js" var="HighChartJS"/>
 	<script type="text/javascript" src="${HighChartJS}"></script>
 	
-<script type="text/javascript">
-	
-$(document).ready(function(){
-	$(function () { 
-		
-		var y_list = [	<c:forEach var="studentNum" items="${studentNumPerYear}" varStatus="stat">
-						<c:if test="${stat.index > 0}">,</c:if>
-						'<c:out value="studentNum[0]/>'                 
-						</c:forEach>]
-		var m_list = [	<c:forEach var="studentNum" items="${studentNumPerYear}" varStatus="stat">
-						<c:if test="${stat.index > 0}">,</c:if>
-						'<c:out value="studentNum[1]/>'                 
-						</c:forEach>]
-		var f_list = [	<c:forEach var="studentNum" items="${studentNumPerYear}" varStatus="stat">
-						<c:if test="${stat.index > 0}">,</c:if>
-						'<c:out value="studentNum[2]/>'                 
-						</c:forEach>]
-			
-		var ylist = y_list + "";
-		var year_list = ylist.split(",");	
-		
-		var mlist = m_list + "";
-	 	var male_list = mlist.split(",").map(Number);
-	
-	 	var flist = f_list + "";
-	 	var female_list= flist.split(",").map(Number);
-		
-	    $('#db_content').highcharts({
-	        chart: {
-	            type: 'bar'
-	        },
-	        title: {
-	            text: 'Number of Students per Year'
-	        },
-	        xAxis: {
-	            categories: year_list
-	        },
-	        yAxis: {
-	            title: {
-	                text: 'Students Number'
-	            }
-	        },
-	        series: [{
-	            name: 'Male',
-	            data: male_list
-	        }, {
-	            name: 'Female',
-	            data: female_list
-	        }]
-	    });
-	});
-});
-	
-</script>
+
 	
 </head>
 <body>

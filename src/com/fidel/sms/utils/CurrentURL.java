@@ -11,7 +11,7 @@ public class CurrentURL {
 		
 		HttpServletRequest request = ((ServletRequestAttributes)RequestContextHolder.getRequestAttributes()).getRequest();
 		
-		String url = request.getRequestURL().toString();
+		String url = request.getRequestURI().toString();
 		
 		int index = url.indexOf("BAS") - 1;
 			

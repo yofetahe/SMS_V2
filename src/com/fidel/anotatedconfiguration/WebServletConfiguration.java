@@ -13,8 +13,7 @@ public class WebServletConfiguration implements WebApplicationInitializer {
 	@Override
 	public void onStartup(ServletContext ctx) throws ServletException {
 		
-		AnnotationConfigWebApplicationContext webCtx = new AnnotationConfigWebApplicationContext();
-		
+		AnnotationConfigWebApplicationContext webCtx = new AnnotationConfigWebApplicationContext();		
 		webCtx.register(SpringConfig.class);
 		webCtx.setServletContext(ctx);
 		
