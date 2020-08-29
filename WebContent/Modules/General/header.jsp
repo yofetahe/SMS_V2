@@ -90,7 +90,7 @@
 								&nbsp;
 							</td>
 							<td align="right" style="min-width: 130px">
-								Login as - <%= session.getAttribute("loggedInUser") %>
+<%-- 								Login as - <%= session.getAttribute("loggedInUser") %> --%>
 							</td>
 							<td align="center" width="10px">
 								&nbsp;

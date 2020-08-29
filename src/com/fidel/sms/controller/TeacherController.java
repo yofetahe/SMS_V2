@@ -118,7 +118,7 @@ public class TeacherController {
 		if(readImg != null){
 						
 			try {
-				response.reset();
+//				response.reset();
 				response.setContentType("image/jpeg");
 				response.getOutputStream().write(readImg, 0, readImg.length);
 				response.getOutputStream().flush();
